@@ -540,7 +540,7 @@ model.label('250_1.mph');
 model.result('pg2').run;
 model.result('pg1').run;
 i=0;
-for j = 600:10:950
+for j = 870:10:950
     
     q = num2str(j);
     model.param.set('W', [q '[nm]']);
