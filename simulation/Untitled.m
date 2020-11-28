@@ -31,7 +31,7 @@ model.param.set('n_air', '1.0', 'Refractive Index of Air');
 model.param.set('n_substrate', '1.45', 'Refractive Index of substrate');
 model.param.set('theta', '10', 'Input fiber angle (degrees)');
 model.param.set('lambda', '1550[nm]', 'Operating Laser Wavelength');
-model.param.set('tm', '255[nm]', 'Thickness of material (silicon)');
+model.param.set('tm', '209[nm]', 'Thickness of material (silicon)');
 model.param.set('ts', '3[um]', 'Thickness of substrate');
 model.param.set('h_clad', '3[um]', 'Cladding Height (Distance between laser in grating)');
 model.param.set('a', '550[nm]', 'Unetched region');
@@ -540,7 +540,7 @@ model.label('250_1.mph');
 model.result('pg2').run;
 model.result('pg1').run;
 i=0;
-for j = 750:10:950
+for j = 530:10:950
     
     q = num2str(j);
     model.param.set('W', [q '[nm]']);
@@ -610,7 +610,7 @@ for j = 750:10:950
         model.result.export.create(z, 'pg2', 'glob1', 'Plot');
         model.result.export(z).set('header', false);
         model.result.export(z).set('fullprec', false);
-        y = ['C:\Users\Anusha\Desktop\FYP-WORKING\Final-Year-Project\255_ts\' q '\' alph '.txt'];
+        y = ['C:\Users\Anusha\Desktop\FYP-WORKING\Final-Year-Project\209_ts\' q '\' alph '.txt'];
         model.result.export(z).set('filename',y);
         model.result.export(z).run;
 
